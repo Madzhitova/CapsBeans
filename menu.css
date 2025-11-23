@@ -1,0 +1,316 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(29, 29, 29);
+    color: #fff8f0;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #639458;
+  color: white;
+  padding: 15px 10%;
+}
+
+.menu a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+
+.burger-checkbox,
+.burger {
+    display: none;
+}
+.hamburger {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    margin: 6px 0;
+    background: white;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* Выпадающее мобильное меню */
+.mobile_menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #639458;
+    padding: 15px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.mobile_menu a {
+    display: block;
+    padding: 10px 0;
+    color: white;
+}
+
+
+
+/* ===== АКТИВАЦИЯ ПРИ HOVER ===== */
+.hamburger:hover .mobile_menu {
+    display: block;
+}
+
+/* Превращение в X */
+.hamburger:hover span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.hamburger:hover span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger:hover span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+
+@media (max-width: 768px) {
+
+    .desktop_menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    header {
+        position: relative;
+    }
+}
+.block1 h1{
+  text-align: center;
+  color: #639458;
+}
+
+
+
+.coffee_beans{
+  margin-bottom: 150px;
+}
+
+.beans_1{
+  width: 200px;
+  height: 420px;
+  transition: .3s;
+}
+
+.beans_1:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color:  #639458;
+  color: #fff8f0;
+  border-radius: 10px;
+}
+
+.coffee_beans h3{
+  color: #639458;
+  text-align: center;
+}
+
+.coffee_beans h1{
+  font-size: 40px;
+  text-align: center;
+}
+
+.beans_photo{
+  width: 120px;
+  border-radius: 10px;
+}
+
+.beans{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+}
+
+.beans_but{
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: #639458;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+
+
+.coffee_capsules h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.capsules_lin1,
+.capsules_lin2{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.capsules_1{
+  width: 150px;
+  height: 400px;
+  transition: .3s;
+}
+
+.capsules_1:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #639458;
+  color: #fff8f0;
+  border-radius: 10px;
+}
+
+
+
+.milk h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.milk_line{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+}
+
+.milk_1{
+  width: 150px;
+  height: 350px;
+  transition: .3s;
+}
+
+.milk_photo{
+  width: 80px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.milk_1:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #639458;
+  color: #fff8f0;
+  border-radius: 10px;
+}
+
+
+
+button:hover {
+  background-color: #78a770;
+}
+
+.cart {
+  background-color: #639458;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  margin: 10px 0;
+}
+
+
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  background-color: #639458;
+}
+
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 5%;
+  }
+
+  .menu a {
+    margin: 5px;
+    display: inline-block
+  }
+
+  .coffee_beans h1,
+  .coffee_capsules h1,
+  .milk h1 {
+    font-size: 30px;
+  }
+
+  .beans {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .beans_1 {
+    width: 160px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .capsules_lin1,
+  .capsules_lin2 {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .capsules_1 {
+    width: 150px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .milk_line {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .milk_1 {
+    width: 150px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .milk_photo {
+    width: 70px;
+    height: auto;
+  }
+
+}

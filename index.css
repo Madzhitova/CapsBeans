@@ -1,0 +1,265 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #ffffff;
+  background-color: rgb(29, 29, 29);
+  color: #fff8f0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff8f0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #639458;
+  color: white;
+  padding: 15px 10%;
+}
+
+.menu a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    margin: 6px 0;
+    background: white;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* Выпадающее мобильное меню */
+.mobile_menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #639458;
+    padding: 15px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.mobile_menu a {
+    display: block;
+    padding: 10px 0;
+    color: white;
+}
+
+
+
+/* ===== АКТИВАЦИЯ ПРИ HOVER ===== */
+.hamburger:hover .mobile_menu {
+    display: block;
+}
+
+/* Превращение в X */
+.hamburger:hover span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.hamburger:hover span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger:hover span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+
+@media (max-width: 768px) {
+
+    .desktop_menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    header {
+        position: relative;
+    }
+}
+
+
+
+.block1 {
+  background-image: url("../img/molodaa-zensina-est-kruassany-v-kafe.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+.block1 h1 {
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.MenuBut {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  background-color: #639458;
+}
+
+button:hover {
+  background-color: #7eba73;
+}
+
+.block2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+}
+
+.block2 h1 {
+  font-size: 40px;
+  margin: 10px;
+}
+
+.block2 p {
+  font-size: 20px;
+  margin: 20px;
+  color: #639458;
+}
+
+.Block2_photo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 300px;
+  gap: 20px;
+}
+
+.block2_photo {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+.coffee_beans h3 {
+  color: #639458;
+  text-align: center;
+}
+
+.coffee_beans h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.beans_photo {
+  width: 120px;
+}
+
+.beans {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 200px;
+}
+
+.beans_but {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: #639458;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  background-color: #639458;
+}
+
+
+/* --- АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ --- */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 5%;
+  }
+
+  .menu a {
+    margin: 5px;
+    display: inline-block;
+  }
+
+  .block1 {
+    height: 450px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .block1 h1 {
+    font-size: 32px;
+  }
+
+  .MenuBut {
+    width: 160px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .block2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .block2 h1 {
+    font-size: 28px;
+  }
+
+  .block2 p {
+    font-size: 18px;
+    margin: 10px 15px;
+  }
+
+  .Block2_photo {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .block2_photo {
+    height: 200px;
+  }
+
+  .beans {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .coffee_beans h1 {
+    font-size: 36px;
+  }
+
+  .beans_photo {
+    width: 100px;
+  }
+}
